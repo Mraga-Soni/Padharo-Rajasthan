@@ -1,0 +1,362 @@
+/* -------- Reset & Base -------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+body {
+  background: #fff;
+  color: #1e293b;
+  line-height: 1.6;
+}
+
+/* -------- Navbar -------- */
+header {
+  background: #fff;
+  padding: 15px 50px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: 'Cinzel', serif; 
+  font-size: 28px;               
+  font-weight: 700;
+  color: #d97706;               
+  letter-spacing: 1px;           
+}
+
+.navbar ul {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #1e293b;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.navbar a:hover {
+  color: #d97706;
+}
+
+/* -------- Auth Buttons -------- */
+.auth-buttons .btn {
+  padding: 8px 16px;
+  border-radius: 20px;
+  margin-left: 10px;
+  text-decoration: none;
+  font-weight: 500;
+  border: 2px solid #d97706; 
+  transition: all 0.3s ease;
+}
+
+/* Login Button */
+.btn.login {
+  background: #d97706;           
+  color: #fff;                
+}
+
+/* Login Hover */
+.btn.login:hover {
+  background:  #b45309;           
+  color: #fff;                   
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Sign Up Button */
+.btn.signup {
+  background: #d97706;           
+  color: #fff;                   
+}
+
+/* Sign Up Hover */
+.btn.signup:hover {
+  background: #b45309;           
+  color: #fff;                   
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+
+/* -------- Hero Section -------- */
+.hero {
+  background: url('assets/Template.jpg')
+    no-repeat center/cover;
+  text-align: center;
+  padding: 120px 20px;
+  color: #fff;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(30, 41, 59, 0.6);
+}
+
+.hero h1,
+.hero p,
+.hero .hero-buttons {
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+.hero .btn {
+  padding: 12px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  background: #eab308; /* golden */
+  color: #1e293b;
+  font-weight: 600;
+  margin: 0 10px;
+  transition: 0.3s;
+}
+
+.hero .btn:hover {
+  background: #d97706;
+  color: #fff;
+}
+
+.btn.whatsapp {
+  background: #25d366;
+  color: #fff;
+}
+
+/* -------- Services -------- */
+.services {
+  padding: 80px 50px;
+  text-align: center;
+}
+
+.services h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+  color: #1e293b;
+}
+
+.service-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+.service-cards .card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s;
+}
+
+.service-cards .card:hover {
+  transform: translateY(-10px);
+}
+
+/* -------- Destinations -------- */
+.destinations {
+  padding: 80px 50px;
+  text-align: center;
+  background: #f9fafb;
+}
+
+.destinations h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+.destination-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.destination-cards .card {
+  background: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  width: 280px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s;
+}
+
+.destination-cards .card:hover {
+  transform: scale(1.05);
+}
+
+.destination-cards img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* -------- Booking Steps -------- */
+.booking-steps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 80px 50px;
+  align-items: center;
+}
+
+.left-content {
+  flex: 1;
+}
+
+.left-content h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.step {
+  margin-bottom: 20px;
+}
+
+.right-content {
+  flex: 1;
+}
+
+.big-card,
+.small-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  margin-bottom: 20px;
+}
+
+.big-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* -------- Why Choose Us -------- */
+.why-choose {
+  padding: 80px 50px;
+  text-align: center;
+  background: #fff7ed; /* light desert */
+}
+
+.why-choose h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+.choose-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+.choose-cards .card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* -------- acontact -------- */
+.contact {
+  padding: 60px 50px;
+  text-align: center;
+  background: #1e293b;
+  color: #fff;
+}
+
+.ncontact h2 {
+  margin-bottom: 20px;
+}
+
+.contact form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.contact input {
+  padding: 12px 15px;
+  border: none;
+  border-radius: 25px;
+  width: 250px;
+}
+
+.contact button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 25px;
+  background: #d97706;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* -------- Footer -------- */
+.footer {
+  background: #0f172a;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-links {
+  margin-top: 10px;
+}
+
+.footer-links a {
+  color: #eab308;
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* -------- Responsive -------- */
+@media (max-width: 768px) {
+  .navbar ul {
+    display: none;
+  }
+
+  .booking-steps {
+    flex-direction: column;
+  }
+
+  .destination-cards {
+    justify-content: center;
+  }
+}
